@@ -20,6 +20,10 @@ const eslintConfig = [
     rules: {
       // Add custom rules here
     },
+    parserOptions: {
+      ecmaVersion: 2021,
+      sourceType: "module",
+    },
   },
 ];
 
