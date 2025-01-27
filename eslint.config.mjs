@@ -17,6 +17,12 @@ const eslintConfig = [
       ecmaVersion: 2021, // Modern JavaScript features
       sourceType: "module", // Enable ES modules
     },
+    env: {
+      browser: true,  // Enable browser global variables
+      commonjs: true, // Enable CommonJS global variables and CommonJS scoping
+      es2021: true,   // Enable all ECMAScript 2021 globals
+      node: true,     // Enable Node.js global variables and Node.js scoping
+    },
     rules: {
       // Add custom rules here
     },
