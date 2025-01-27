@@ -12,25 +12,27 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals"),
   {
+    parser: "@babel/eslint-parser", // Add this parser
+    parserOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module", // Ensure this is here
+    },
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: "module",
       globals: {
-        window: "readonly", // Browser global variables
+        window: "readonly", 
         document: "readonly",
         navigator: "readonly",
         console: "readonly",
-        process: "readonly", // Node.js global variables
+        process: "readonly",
         module: "readonly",
         require: "readonly",
       },
     },
     rules: {
-      // Add any custom ESLint rules here
+      // Custom ESLint rules
     },
   },
 ];
 
 export default eslintConfig;
- 
